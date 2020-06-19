@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'rick';
+    src: url(../assets/font/get-schwifty.ttf);
+  }
+  .Home{
+    background-color: #001529;
+    height: 100vh;
+    color :white;
+}
+.Home h1{
+    color: white;
+    text-align:  center;
+    font-family: 'rick';
+    font-size: 48px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.Home #img{
+    margin: auto;
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+}
+.Home .imgPortal .portal{
+    -webkit-animation:spin 16s linear infinite;
+    -moz-animation:spin 16s linear infinite;
+    animation:spin 16s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
