@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'rick';
+    src: url(../assets/font/get-schwifty.ttf);
+}
+.Register{
+    background-color: #001529;
+    height: 100vh;
+    color :white;
+    .form-register{
+        max-width: 800px;
+        margin: auto;
+        form{
+            display: block;
+            input{
+                margin: 20px auto;
+            }
+        }
+    }
+    .noti{
+        &-text{
+            position: fixed;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: #85ff67;
+            text-align: center;
+            transition: 1s ease-in-out;
+            h1{
+                margin-top: 25px;
+                font-size: 30px;
+                color: #ffffff;
+                font-weight: 900;
+                text-shadow: 1px 2px 3px #001529;
+
+            }
+        }
+        .show{
+            bottom: 0px;
+        }
+    }
+}

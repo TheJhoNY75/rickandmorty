@@ -1,5 +1,5 @@
 
-.Characters{
+.Episodes{
     @font-face {
         font-family: 'rick';
         src: url(../assets/font/get-schwifty.ttf);
@@ -28,12 +28,17 @@
             border: none;
             transition-duration: 0.3s;
             transform: translateY(0px);
+            text-align: center;
             &-head-wrapper{
                 .ant-card-extra{
                     h3{
                         font-family: 'rick';
-                        font-size: 24px;
+                        font-size: 64px;
                         color:#00b0c8;
+                        position: absolute;
+                        top: -34px;
+                        transform: rotate(-8deg);
+                        text-shadow: 0px 4px 4px #85ff67
                     }
                 }
             }

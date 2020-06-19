@@ -7,70 +7,122 @@ import {useState, useEffect} from 'react';
 
 
 class Characters extends React.Component{
-    state = { visible: false };
-
-    showModal = () => {
+    state = { visible1: false, visible2: false, visible3: false };
+    showModal1 = () => {
         this.setState({
-        visible: true,
+        visible1: true,
         });
     };
 
-    handleOk = e => {
+    handleOk1 = e => {
         console.log(e);
         this.setState({
-        visible: false,
+        visible1: false,
         });
     };
 
-    handleCancel = e => {
+    handleCancel1 = e => {
         console.log(e);
         this.setState({
-        visible: false,
+        visible1: false,
+        });
+    };
+    showModal2 = () => {
+        this.setState({
+        visible2: true,
+        });
+    };
+
+    handleOk2 = e => {
+        console.log(e);
+        this.setState({
+        visible2: false,
+        });
+    };
+
+    handleCancel2 = e => {
+        console.log(e);
+        this.setState({
+        visible2: false,
+        });
+    };
+    showModal3 = () => {
+        this.setState({
+        visible3: true,
+        });
+    };
+
+    handleOk3 = e => {
+        console.log(e);
+        this.setState({
+        visible3: false,
+        });
+    };
+
+    handleCancel3 = e => {
+        console.log(e);
+        this.setState({
+        visible3: false,
         });
     };
     render() {
     return (
         <div className="Characters">
             <div className="cont">
-                <Button type="primary" onClick={this.showModal}>
-                    <Card title="Rick Sanchez" extra={<h3 id='idn'>1</h3>} style={{ width: 300 }}>
+                <Button type="primary" onClick={this.showModal1}>
+                    <Card title="Rick Sanchez" style={{ width: 300 }}>
                         <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt=""/>
                         <p>Location: Earth (C-137)</p>
-                        <p>Alive | Human</p>
                     </Card>
                 </Button>
                 <Modal
-                    title="Basic Modal"
-                    visible={this.state.visible}
-                    onOk={this.handleOk}
-                    onCancel={this.handleCancel}
+                    title="Rick Sanchez"
+                    visible={this.state.visible1}
+                    onOk={this.handleOk1}
+                    onCancel={this.handleCancel1}
                     >
-                    <p>Some contents...1</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                        <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" width='470px' alt=""/>
+                    <p>Status: Alive </p>
+                    <p>Specie: Human </p>
+                    <p>Gender: Male </p>
+                    <p>Location: Earth (C-137)</p>
                 </Modal>
-                <Button type="primary" onClick={this.showModal}>
-                    <Card title="Morty Smith" extra={<h3 id='idn'>2</h3>} style={{ width: 300 }}>
+                <Button type="primary" onClick={this.showModal2}>
+                    <Card title="Morty Smith" style={{ width: 300 }}>
                         <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt=""/>
                         <p>Location: Earth (C-137)</p>
-                        <p>Alive | Human</p>
                     </Card>  
                 </Button>
                 <Modal
-                    title="Basic Modal"
-                    visible={this.state.visible}
-                    onOk={this.handleOk}
-                    onCancel={this.handleCancel}
+                    title="Morty Smith"
+                    visible={this.state.visible2}
+                    onOk={this.handleOk2}
+                    onCancel={this.handleCancel2}
                     >
-                    <p>Some contents...2</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                        <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" width='470px' alt=""/>
+                    <p>Status: Alive </p>
+                    <p>Specie: Human </p>
+                    <p>Gender: Male </p>
+                    <p>Location: Earth (C-137)</p>
                 </Modal>
-                <Card title="Summer Smith" extra={<h3 id='idn'>3</h3>} style={{ width: 300 }}>
-                    <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt=""/>
+                <Button type="primary" onClick={this.showModal3}>
+                    <Card title="Summer Smith" style={{ width: 300 }}>
+                        <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt=""/>
+                        <p>Location: Earth (Replacement Dimension)</p>
+                    </Card> 
+                </Button>
+                <Modal
+                    title="Summer Smith"
+                    visible={this.state.visible3}
+                    onOk={this.handleOk3}
+                    onCancel={this.handleCancel3}
+                    >
+                        <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" width='470px' alt=""/>
+                    <p>Status: Alive </p>
+                    <p>Specie: Human </p>
+                    <p>Gender: Male </p>
                     <p>Location: Earth (Replacement Dimension)</p>
-                    <p>Alive | Human</p>
-                </Card>  
+                </Modal> 
             </div> 
         </div>
     )

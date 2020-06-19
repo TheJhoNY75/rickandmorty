@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: 'rick';
+    src: url(../assets/font/get-schwifty.ttf);
+}
+  .Error404{
+    background-color: #001529;
+    height: 100vh;
+    color :white;
+    h1{
+        color:white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 52px;
+        font-family: 'rick';
+    }
+    img{
+        margin: auto;
+        top: 200px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 400px;
+    }
+}
